@@ -34,72 +34,72 @@ function Rating() {
             </p>
           </div>
           <div>
-            <form className="flex justify-between">
-              <div className="grid place-content-center w-12 h-12 text-light-grey bg-dark-blue rounded-full hover:bg-new-orange hover:text-white">
-                <label htmlFor="radio-1" className="py-3 px-4 rounded-full">
-                  <input
-                    className="hidden"
-                    type="radio"
-                    id="radio-1"
-                    name="radiobuttons"
-                    value="1"
-                    onChange={handleChange}
-                  />
+            <form className="flex justify-between my-5">
+              <label htmlFor="radio-1">
+                <input
+                  className="hidden peer"
+                  type="radio"
+                  id="radio-1"
+                  name="radiobuttons"
+                  value="1"
+                  onChange={handleChange}
+                />
+                <span className="hover:bg-new-orange hover:text-white peer-checked:bg-medium-grey peer-checked:text-white px-[1.4rem] py-4 id place-content-center text-light-grey bg-dark-blue rounded-full">
                   1
-                </label>
-              </div>
-              <div className="grid place-content-center w-12 h-12 text-light-grey bg-dark-blue rounded-full hover:bg-new-orange hover:text-white">
-                <label htmlFor="radio-2" className="py-3 px-4 rounded-full">
-                  <input
-                    className="hidden"
-                    type="radio"
-                    id="radio-2"
-                    name="radiobuttons"
-                    value="2"
-                    onChange={handleChange}
-                  />
+                </span>
+              </label>
+              <label htmlFor="radio-2">
+                <input
+                  className="hidden peer"
+                  type="radio"
+                  id="radio-2"
+                  name="radiobuttons"
+                  value="2"
+                  onChange={handleChange}
+                />
+                <span className="hover:bg-new-orange hover:text-white peer-checked:bg-medium-grey peer-checked:text-white px-[1.275rem] py-4 id place-content-center text-light-grey bg-dark-blue rounded-full">
                   2
-                </label>
-              </div>
-              <div className="grid place-content-center w-12 h-12 text-light-grey bg-dark-blue rounded-full hover:bg-new-orange hover:text-white">
-                <label htmlFor="radio-3" className="py-3 px-4 rounded-full">
-                  <input
-                    className="hidden"
-                    type="radio"
-                    id="radio-3"
-                    name="radiobuttons"
-                    value="3"
-                    onChange={handleChange}
-                  />
+                </span>
+              </label>
+              <label htmlFor="radio-3">
+                <input
+                  className="hidden peer"
+                  type="radio"
+                  id="radio-3"
+                  name="radiobuttons"
+                  value="3"
+                  onChange={handleChange}
+                />
+                <span className="hover:bg-new-orange hover:text-white peer-checked:bg-medium-grey peer-checked:text-white px-[1.275rem] py-4 id place-content-center text-light-grey bg-dark-blue rounded-full">
                   3
-                </label>
-              </div>
-              <div className="grid place-content-center w-12 h-12 text-light-grey bg-dark-blue rounded-full hover:bg-new-orange hover:text-white">
-                <label htmlFor="radio-4" className="py-3 px-4 rounded-full">
-                  <input
-                    className="hidden"
-                    type="radio"
-                    id="radio-4"
-                    name="radiobuttons"
-                    value="4"
-                    onChange={handleChange}
-                  />
+                </span>
+              </label>
+              <label htmlFor="radio-4">
+                <input
+                  className="hidden peer"
+                  type="radio"
+                  id="radio-4"
+                  name="radiobuttons"
+                  value="4"
+                  onChange={handleChange}
+                />
+                <span className="hover:bg-new-orange hover:text-white peer-checked:bg-medium-grey peer-checked:text-white px-[1.275rem] py-4 id place-content-center text-light-grey bg-dark-blue rounded-full">
                   4
-                </label>
-              </div>
-              <div className="grid place-content-center w-12 h-12 text-light-grey bg-dark-blue rounded-full hover:bg-new-orange hover:text-white">
-                <label htmlFor="radio-5" className="py-3 px-4 rounded-full">
-                  <input
-                    className="hidden"
-                    type="radio"
-                    id="radio-5"
-                    name="radiobuttons"
-                    value="5"
-                    onChange={handleChange}
-                  />
+                </span>
+              </label>
+              <label htmlFor="radio-5">
+                <input
+                  className="hidden peer"
+                  type="radio"
+                  id="radio-5"
+                  name="radiobuttons"
+                  value="5"
+                  onChange={handleChange}
+                />
+                <span className="hover:bg-new-orange hover:text-white peer-checked:bg-medium-grey peer-checked:text-white px-[1.275rem] py-4 id place-content-center text-light-grey bg-dark-blue rounded-full">
                   5
-                </label>
-              </div>
+                </span>
+              </label>
             </form>
           </div>
           <div>
