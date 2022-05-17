@@ -1,12 +1,10 @@
-import './App.css';
-import Rating from './components/Rating';
-
+import Rating from "./components/Rating";
 
 function App() {
   return (
-  <div>
-    <Rating />
-  </div>
+    <div className="bg-very-dark-blue w-screen h-screen">
+      <Rating />
+    </div>
   );
 }
 

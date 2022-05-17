@@ -1,8 +1,8 @@
-function Thanks() {
+function Thanks(props) {
   return (
     <div className="card">
       <div>
-        <p>You selected 'Add rating here' out of 5</p>
+        <p>You selected {props.rating} out of 5</p>
       </div>
       <div>
         <h2>Thank you!</h2>

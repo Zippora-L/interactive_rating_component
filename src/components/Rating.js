@@ -1,65 +1,103 @@
-import { useState }from 'react';
-import Thanks from './Thanks';
+import React from "react";
+import Thanks from "./Thanks";
 
 function Rating() {
-  const [ thanksIsOpen, setThanksIsOpen ] = useState(false);
+  const [thanksIsOpen, setThanksIsOpen] = React.useState(false);
+  const [selectedRating, setSelectedRating] = React.useState(null);
+
 
   function submitHandler() {
-    setThanksIsOpen(true);
+    if (selectedRating) {
+      setThanksIsOpen(true);
+    }
+  }
+
+  function handleChange(event) {
+    console.log(event);
+    setSelectedRating(event.target.value);
   }
 
   return (
-  <div className='card'>
-    <div>
-      <h2>How did we do?</h2>
-    </div>
-    <div>
-      <p>
-      Please let us know how we did with your support request.
-      All feedback is appreciated to help us improve our offering!
-      </p>
-    </div>
-    <div>
-      <from>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"/>
-           <label class="form-check-label" for="flexRadioDefault1">
-             1
-          </label>
+    <>
+      {!thanksIsOpen && (
+        <div className="bg-dark-blue text-white">
+          <div>
+            <h2>How did we do?</h2>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
-            <label class="form-check-label" for="flexRadioDefault2">
-              2
-            </label>
+          <div>
+            <p>
+              Please let us know how we did with your support request. All
+              feedback is appreciated to help us improve our offering!
+            </p>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
-            <label class="form-check-label" for="flexRadioDefault2">
-              3
-            </label>
+          <div>
+            <form className="rating">
+              <div className="form-check">
+                <label className="radio-inline">
+                  <input
+                    type="radio"
+                    name="optradio"
+                    value="1"
+                    onChange={handleChange}
+                  />
+                  1
+                </label>
+              </div>
+              <div className="form-check">
+                <label className="radio-inline">
+                  <input
+                    type="radio"
+                    name="optradio"
+                    value="2"
+                    onChange={handleChange}
+                  />
+                  2
+                </label>
+              </div>
+              <div className="form-check">
+                <label className="radio-inline">
+                  <input
+                    type="radio"
+                    name="optradio"
+                    value="3"
+                    onChange={handleChange}
+                  />
+                  3
+                </label>
+              </div>
+              <div className="form-check">
+                <label className="radio-inline">
+                  <input
+                    type="radio"
+                    name="optradio"
+                    value="4"
+                    onChange={handleChange}
+                  />
+                  4
+                </label>
+              </div>
+              <div className="form-check">
+                <label className="radio-inline">
+                  <input
+                    type="radio"
+                    name="optradio"
+                    value="5"
+                    onChange={handleChange}
+                  />
+                  5
+                </label>
+              </div>
+            </form>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
-            <label class="form-check-label" for="flexRadioDefault2">
-              4
-            </label>
+          <div>
+            <button className="btn" onClick={submitHandler}>
+              Submit
+            </button>
           </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked/>
-            <label class="form-check-label" for="flexRadioDefault2">
-              5
-            </label>
-          </div>
-      </from>
-    </div>
-    <div>
-      <button className='btn' onClick={submitHandler}>Submit</button>
-    </div>
-
-    { thanksIsOpen && <Thanks />}
-
-  </div>
+        </div>
+      )}
+      {thanksIsOpen && <Thanks rating={selectedRating} />}
+    </>
   );
 }
 
