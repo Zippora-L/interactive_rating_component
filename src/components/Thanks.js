@@ -1,14 +1,20 @@
+import illustration from "../assets/illustration-thank-you.svg";
+
 function Thanks(props) {
   return (
-    <div className="card">
+    <div className="bg-gradient-to-b from-[#212832] to-[#171e28] text-light-grey rounded-2xl py-6 px-8 w-96 h-96 grid gap-4 place-items-center">
+      <img
+        src={illustration}
+        alt="Rating sent illustration"
+      />
+        <p className="bg-dark-blue text-new-orange rounded-full w-56 p-2 text-center">
+          You selected {props.rating} out of 5
+        </p>
       <div>
-        <p>You selected {props.rating} out of 5</p>
-      </div>
-      <div>
-        <h2>Thank you!</h2>
-        <p>
-          We appreciate you taking the time to give a rating. If you ever need more support,
-          don’t hesitate to get in touch!
+        <h2 className="text-white text-[30px] text-center">Thank you!</h2>
+        <p className="text-[15px] text-center">
+          We appreciate you taking the time to give a rating. If you ever need
+          more support, don’t hesitate to get in touch!
         </p>
       </div>
     </div>

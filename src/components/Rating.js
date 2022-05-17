@@ -20,7 +20,7 @@ function Rating() {
   return (
     <>
       {!thanksIsOpen && (
-        <div className="bg-gradient-to-b from-[#212832] to-[#171e28] text-light-grey rounded-2xl py-6 px-8 w-96 grid gap-4">
+        <div className="bg-gradient-to-b from-[#212832] to-[#171e28] text-light-grey rounded-2xl py-6 px-8 w-96 h-96 grid gap-4">
           <img
             className="bg-dark-blue p-4 rounded-full"
             src={iconstar}
