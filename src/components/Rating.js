@@ -5,7 +5,6 @@ function Rating() {
   const [thanksIsOpen, setThanksIsOpen] = React.useState(false);
   const [selectedRating, setSelectedRating] = React.useState(null);
 
-
   function submitHandler() {
     if (selectedRating) {
       setThanksIsOpen(true);
@@ -20,7 +19,7 @@ function Rating() {
   return (
     <>
       {!thanksIsOpen && (
-        <div className="bg-dark-blue text-white">
+        <div className="bg-dark-blue text-red-500">
           <div>
             <h2>How did we do?</h2>
           </div>
